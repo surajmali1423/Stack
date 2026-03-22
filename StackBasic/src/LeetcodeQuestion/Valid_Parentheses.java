@@ -21,7 +21,21 @@ public class Valid_Parentheses {
 
           return st.isEmpty();
     }
+
+    public static boolean isValid(String str){
+          Stack<Character>st = new Stack<>();
+
+          for(char ch  : str.toCharArray()){
+                if(ch == '(') st.push(')');
+                else if(ch == '{') st.push('}');
+                else if(ch == '[') st.push(']');
+                else if(st.peek() == ch) st.pop();
+                else return false;
+          }
+
+          return st.isEmpty();
+    }
     public static void main(String[] args) {
-        System.out.println(isBalance("{{(([[]][]))}}"));
+        System.out.println(isValid("((())){()()}"));
     }
 }
