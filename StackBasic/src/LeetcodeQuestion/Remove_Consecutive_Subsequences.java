@@ -21,7 +21,7 @@ public class Remove_Consecutive_Subsequences {
         return temp;
     }
     public static void main(String[] args) {
-         int [] arr = {1 , 2, 2 , 3 ,3 , 3, 4 , 4 , 5};
+         int [] arr = {1 , 1 , 1 , 1};
 
          int [] arr1 = Remove_Consective(arr);
 
