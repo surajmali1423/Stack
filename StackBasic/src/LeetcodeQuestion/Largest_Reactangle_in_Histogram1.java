@@ -2,7 +2,7 @@ package LeetcodeQuestion;
 
 import java.util.Stack;
 
-public class Largest_Reactangle_in_Histogram {
+public class Largest_Reactangle_in_Histogram1 {
     public static int [] PSE(int [] arr){
         int n = arr.length;
         Stack<Integer> st =   new Stack<>();
@@ -39,9 +39,7 @@ public class Largest_Reactangle_in_Histogram {
         int MaxArea = Integer.MIN_VALUE;
 
         for (int i = 0; i < n; i++) {
-            int ans = N[i] - P[i] - 1;
-            int area = arr[i] * ans;
-            MaxArea = Math.max(MaxArea , area);
+            MaxArea = Math.max(MaxArea , (arr[i] * (N[i] - P[i] - 1)));
         }
 
         return MaxArea;
